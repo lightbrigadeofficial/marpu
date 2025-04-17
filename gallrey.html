@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Marpu Gallery THE MARPU JOURNAL </title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="icon" type="image/x-icon" href="2cdbfc_0aef352685334e3ea8b62b3fbb89a2b6~mv2.png">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: biege;
+    }
+
+    h1 {
+      text-align: center;
+      padding: 2rem 0;
+      font-weight: 600;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .gallery-item {
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background: rgba(0, 0, 0, 0.85);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .modal.active {
+      display: flex;
+    }
+
+    .modal img {
+      max-width: 90vw;
+      max-height: 90vh;
+      border-radius: 8px;
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+      animation: fadeIn 0.3s ease;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 40px;
+      color: white;
+      cursor: pointer;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo"><img src="13.avif" alt="LOGO"></a>
+        <ul class="navmenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blogs.html">Blogs</a></li>
+            <li><a href="https://www.marpu.org/">About Marpu</a></li>
+            <li><a href="https://brigade-store.vercel.app/user.html">About The Developer</a></li>
+            <!--<li><a href="#">Docs</a></li>-->
+        </ul>
+        <div class="product-text">
+            <h5>^_~</h5>
+        </div>
+    </header>
+
+<h1>Our Professional Gallery</h1>
+
+<div class="gallery-grid">
+  <div class="gallery-item"><img src="WhatsApp Image 2025-04-17 at 10.41.36 PM (1).jpeg" alt="img1"></div>
+  <div class="gallery-item"><img src="WhatsApp Image 2025-04-17 at 10.41.37 PM (1).jpeg" alt="img2"></div>
+  <div class="gallery-item"><img src="WhatsApp Image 2025-04-17 at 10.41.37 PM (2).jpeg" alt="img3"></div>
+  <div class="gallery-item"><img src="WhatsApp Image 2025-04-17 at 10.41.37 PM.jpeg" alt="img4"></div>
+  <div class="gallery-item"><img src="WhatsApp Image 2025-04-17 at 10.41.38 PM (1).jpeg" alt="img5"></div>
+</div>
+
+<!-- Modal -->
+<div class="modal" id="imgModal">
+  <span class="modal-close" id="modalClose">&times;</span>
+  <img id="modalImage" src="" alt="Enlarged View">
+</div>
+
+<script>
+  const modal = document.getElementById("imgModal");
+  const modalImg = document.getElementById("modalImage");
+  const closeBtn = document.getElementById("modalClose");
+
+  document.querySelectorAll(".gallery-item img").forEach(img => {
+    img.addEventListener("click", () => {
+      modalImg.src = img.src;
+      modal.classList.add("active");
+    });
+  });
+
+  closeBtn.addEventListener("click", () => {
+    modal.classList.remove("active");
+  });
+
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.classList.remove("active");
+    }
+  });
+</script>
+
+</body>
+</html>
