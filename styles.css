@@ -9,6 +9,7 @@
     scroll-behavior: smooth;
     list-style: none;
     text-decoration: none;
+    background-color: beige;
 }
 
 body {
@@ -126,6 +127,9 @@ section {
         text-align: center;
     }
     .indi{
+        margin-top: 50%;
+    }
+    .indi2{
         margin-top: 50%;
     }
     section {
