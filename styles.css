@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cedarville+Cursive&family=Ephesis&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Tektur:wght@400..900&family=UnifrakturMaguntia&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cedarville+Cursive&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Tektur:wght@400..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    width: 100%;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 5%;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10%;
+    font-family: "UnifrakturMaguntia", cursive;
+    font-weight: 400;
+}
+
+.logo img {
+    max-width: 120px;
+    height: auto;
+}
+
+.navmenu {
+    display: flex;
+}
+
+.navmenu a {
+    color: #2c2c2c;
+    font-size: 23px;
+    text-transform: capitalize;
+    padding: 10px 20px;
+    font-weight: 400;
+    transition: all .42s ease;
+}
+
+.navmenu a:hover {
+    color: #ee1c47;
+}
+
+.nav-icon {
+    display: flex;
+    align-items: center;
+}
+
+.nav-icon i {
+    margin-right: 20px;
+    color: #2c2c2c;
+    font-size: 25px;
+    font-weight: 400;
+    transition: all .42s ease;
+}
+
+.nav-icon i:hover {
+    transform: scale(1.1);
+    color: #ee1c47;
+}
+
+#menu-icon {
+    font-size: 35px;
+    color: #2c2c2c;
+    z-index: 10001;
+    cursor: pointer;
+}
+
+section {
+    padding: 5% 10%;
+}
+
+.about {
+    padding-top: 8%;
+}
+
+.abouttheauthor {
+    padding-left: 10%;
+    font-family: "UnifrakturMaguntia", cursive;
+    font-weight: 400;
+}
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 5%;
+        gap: 10px;
+    }
+
+    .logo img {
+        max-width: 100px;
+    }
+
+    .navmenu {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+
+    .navmenu li {
+        width: 100%;
+    }
+
+    .navmenu a {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+        font-size: 18px;
+        text-align: left;
+    }
+
+    .abouttheauthor {
+        font-size: 24px;
+        padding-left: 0;
+        text-align: center;
+    }
+    .indi{
+        margin-top: 50%;
+    }
+    section {
+        padding: 10% 5%;
+    }
+}
+.jojo{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+    padding-left: 10%;
+    font-size: 25px;
+}
