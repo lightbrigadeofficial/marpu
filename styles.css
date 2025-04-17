@@ -31,7 +31,7 @@ header {
 }
 
 .logo img {
-    max-width: 120px;
+    max-width: 100%;
     height: auto;
 }
 
@@ -189,4 +189,10 @@ section {
   }
   .arrow{
     font-size: 55px;
+  }
+  .dorado{
+    font-family: "Ephesis", cursive;
+    font-weight: 400;
+    font-size: 28px;
+    font-weight: bold;
   }
